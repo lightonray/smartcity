@@ -1,0 +1,96 @@
+{
+  "models": {
+    "trafficData": {
+      "sensor_id": "string",
+      "timestamp": "datetime",
+      "location": {
+        "latitude": "float",
+        "longitude": "float"
+      },
+      "vehicle_count": "integer",
+      "average_speed": "float",
+      "congestion_level": "integer"
+    },
+    "parkingData": {
+      "lot_id": "string",
+      "timestamp": "datetime",
+      "location": {
+        "latitude": "float",
+        "longitude": "float"
+      },
+      "available_spaces": "integer",
+      "total_spaces": "integer",
+      "occupancy_rate": "float"
+    },
+    "airQualityData": {
+      "sensor_id": "string",
+      "timestamp": "datetime",
+      "location": {
+        "latitude": "float",
+        "longitude": "float"
+      },
+      "aqi": "integer",
+      "temperature": "float",
+      "humidity": "float"
+    },
+    "lightingData": {
+      "light_id": "string",
+      "timestamp": "datetime",
+      "location": {
+        "latitude": "float",
+        "longitude": "float"
+      },
+      "status": "string",
+      "brightness_level": "integer",
+      "power_consumption": "float"
+    },
+    "wasteContainerData": {
+      "container_id": "string",
+      "timestamp": "datetime",
+      "location": {
+        "latitude": "float",
+        "longitude": "float"
+      },
+      "waste_type": "string",
+      "fill_level": "float",
+      "collection_priority": "integer"
+    },
+    "transitVehicleData": {
+      "vehicle_id": "string",
+      "timestamp": "datetime",
+      "location": {
+        "latitude": "float",
+        "longitude": "float"
+      },
+      "route_id": "string",
+      "vehicle_type": "string",
+      "passenger_count": "integer"
+    }
+  },
+  "services": {
+    "trafficMonitoringService": {
+      "description": "Handles real-time traffic data collection and distribution",
+      "dataModel": "trafficData"
+    },
+    "parkingManagementService": {
+      "description": "Monitors parking availability across the city",
+      "dataModel": "parkingData"
+    },
+    "airQualityMonitoringService": {
+      "description": "Collects air quality data throughout the city",
+      "dataModel": "airQualityData"
+    },
+    "smartLightingService": {
+      "description": "Manages the city's smart lighting infrastructure",
+      "dataModel": "lightingData"
+    },
+    "wasteManagementService": {
+      "description": "Monitors waste collection needs",
+      "dataModel": "wasteContainerData"
+    },
+    "publicTransportService": {
+      "description": "Tracks public transportation vehicles and passenger counts",
+      "dataModel": "transitVehicleData"
+    }
+  }
+}

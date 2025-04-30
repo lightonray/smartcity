@@ -1,0 +1,23 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+venv/
+.venv/
+
+# Local database
+smartcity.db
+
+# IDE/editor configs
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.idea/
+
+# MacOS
+.DS_Store
+
+# Environment files
+.env
